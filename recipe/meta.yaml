@@ -23,11 +23,11 @@ outputs:
     script: build_travo.sh
     requirements:
       host:
-        - python >=3.8
-        - flit-core >=3.2,<4
+        - python >=3.9
+        - hatchling.build
         - pip
       run:
-        - python >=3.8
+        - python >=3.9
         - colorlog
         - dataclasses
         - deprecation
@@ -52,12 +52,12 @@ outputs:
     script: build_travo-jupyter.sh
     requirements:
       host:
-        - python >=3.8
+        - python >=3.9
         - {{ pin_subpackage('travo', exact=True) }}
-        - flit-core >=3.2,<4
+        - hatchling.build
         - pip
       run:
-        - python >=3.8
+        - python >=3.9
         - {{ pin_subpackage('travo', exact=True) }}
         - colorlog
         - dataclasses
