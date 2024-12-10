@@ -1,13 +1,13 @@
 {% set name = "travo" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name }}-split
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/travo-{{ version }}.tar.gz
-  sha256: 61da7a967051f93707ba4fe7c13e5399567e9e1eae72ac766dce49e678490f36
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/travo-{{ version }}.tar.gz
+  sha256: 89f03ffa9c8cbfcf748c6496294e52e54e3d2dec5fae8c05c0545052174fb4ca
 
 build:
   noarch: python
@@ -19,70 +19,70 @@ build:
 outputs:
   - name: travo
     build:
-        noarch: python
+      noarch: python
     script: build_travo.sh
     requirements:
-        host:
-          - python >=3.8
-          - flit-core >=3.2,<4
-          - pip
-        run:
-          - python >=3.8
-          - colorlog
-          - dataclasses
-          - deprecation
-          - typing_utils
-          - requests
-          - tqdm
-          - anybadge
-          - i18nice
-          - pyyaml
+      host:
+        - python >=3.8
+        - flit-core >=3.2,<4
+        - pip
+      run:
+        - python >=3.8
+        - colorlog
+        - dataclasses
+        - deprecation
+        - typing_utils
+        - requests
+        - tqdm
+        - anybadge
+        - i18nice
+        - pyyaml
     test:
-        imports:
-          - travo
-        commands:
-          - pip check
-          - travo --help
-        requires:
-          - pip
+      imports:
+        - travo
+      commands:
+        - pip check
+        - travo --help
+      requires:
+        - pip
 
   - name: travo-jupyter
     build:
-        noarch: python
+      noarch: python
     script: build_travo-jupyter.sh
     requirements:
-        host:
-          - python >=3.8
-          - {{ pin_subpackage('travo', exact=True) }}
-          - flit-core >=3.2,<4
-          - pip
-        run:
-          - python >=3.8
-          - {{ pin_subpackage('travo', exact=True) }}
-          - colorlog
-          - dataclasses
-          - deprecation
-          - typing_utils
-          - requests
-          - tqdm
-          - anybadge
-          - i18nice
-          - pyyaml
-          - nbgrader
-          - numpy
-          - pandas
-          - ipylab
-          - ipywidgets
-          - ipydatagrid
-          - jupytext
+      host:
+        - python >=3.8
+        - {{ pin_subpackage('travo', exact=True) }}
+        - flit-core >=3.2,<4
+        - pip
+      run:
+        - python >=3.8
+        - {{ pin_subpackage('travo', exact=True) }}
+        - colorlog
+        - dataclasses
+        - deprecation
+        - typing_utils
+        - requests
+        - tqdm
+        - anybadge
+        - i18nice
+        - pyyaml
+        - nbgrader
+        - numpy
+        - pandas
+        - ipylab
+        - ipywidgets
+        - ipydatagrid
+        - jupytext
     test:
-        imports:
-          - travo
-        commands:
-          - pip check
-          - travo --help
-        requires:
-          - pip
+      imports:
+        - travo
+      commands:
+        - pip check
+        - travo --help
+      requires:
+        - pip
 
 about:
   summary: Management tools for gitlab-based assignment workflows
