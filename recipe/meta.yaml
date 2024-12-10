@@ -24,7 +24,7 @@ outputs:
     requirements:
       host:
         - python >=3.9
-        - hatch
+        - hatchling
         - pip
       run:
         - python >=3.9
@@ -54,7 +54,7 @@ outputs:
       host:
         - python >=3.9
         - {{ pin_subpackage('travo', exact=True) }}
-        - hatch
+        - hatchling
         - pip
       run:
         - python >=3.9
