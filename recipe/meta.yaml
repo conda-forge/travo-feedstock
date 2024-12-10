@@ -25,6 +25,7 @@ outputs:
       host:
         - python >=3.9
         - hatchling
+        - hatch-vcs
         - pip
       run:
         - python >=3.9
@@ -55,6 +56,7 @@ outputs:
         - python >=3.9
         - {{ pin_subpackage('travo', exact=True) }}
         - hatchling
+        - hatch-vcs
         - pip
       run:
         - python >=3.9
