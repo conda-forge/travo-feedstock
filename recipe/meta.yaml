@@ -1,5 +1,5 @@
 {% set name = "travo" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 
 package:
   name: {{ name }}-split
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/travo-{{ version }}.tar.gz
-  sha256: 89f03ffa9c8cbfcf748c6496294e52e54e3d2dec5fae8c05c0545052174fb4ca
+  sha256: 22b2a5acef7fe611758895ca96ee4e4a3063b8620733815adb372ff34be39d2b
 
 build:
   noarch: python
-  number: 1
+  number: 0
   entry_points:
     - travo = travo.console_scripts:travo
     - travo-echo-travo-token = travo.console_scripts:travo_echo_travo_token
