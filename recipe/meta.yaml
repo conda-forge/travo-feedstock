@@ -1,5 +1,5 @@
 {% set name = "travo" %}
-{% set version = "1.1.1" %}
+{% set version = "1.1.2" %}
 
 package:
   name: {{ name }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/travo-{{ version }}.tar.gz
-  sha256: 22b2a5acef7fe611758895ca96ee4e4a3063b8620733815adb372ff34be39d2b
+  sha256: 38de3c9fe8c739e109c068143bdcf039d0d78706a421dc382965cc12d46945e0
 
 build:
   noarch: python
