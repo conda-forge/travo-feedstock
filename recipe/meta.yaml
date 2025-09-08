@@ -32,6 +32,7 @@ outputs:
         - colorlog
         - dataclasses
         - deprecation
+        - pytest
         - typing_utils
         - requests
         - tqdm
@@ -45,6 +46,7 @@ outputs:
         - pip check
         - travo --help
       requires:
+        - python {{ python_min }}
         - pip
 
   - name: travo-jupyter
@@ -65,6 +67,7 @@ outputs:
         - dataclasses
         - deprecation
         - typing_utils
+        - pytest
         - requests
         - tqdm
         - anybadge
