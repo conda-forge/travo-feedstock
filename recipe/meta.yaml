@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/travo-{{ version }}.tar.gz
-  sha256: 6a3ceb03b23a7c58634aa82f572cdb3e28e6ee5091b1e81def1c14f60d2aca20
+  sha256: 9e182df35b672333b39d359a880c1fd97626576036f0c67eca34f732f9aee650
 
 build:
   noarch: python
